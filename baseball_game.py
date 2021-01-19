@@ -293,6 +293,9 @@ def main():
             if result[0]==3:
                 while True:
                     flag=input("You win, one more(Y/N)?")
+                    if flag==str(0):
+                        exitOuterLoop =True
+                        break
                     if is_no(flag) or is_yes(flag):
                         if is_no(flag):
                             exitOuterLoop =True
