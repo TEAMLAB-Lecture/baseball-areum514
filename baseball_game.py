@@ -292,7 +292,7 @@ def main():
             print(f"Strikes : {result[0]} , Balls : {result[1]} ")
             if result[0]==3:
                 while True:
-                    flag=input("You win, one more(Y/N)?")
+                    flag=input("You win, one more(Y/N) ?")
                     if flag==str(0):
                         exitOuterLoop =True
                         break
