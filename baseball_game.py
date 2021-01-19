@@ -89,14 +89,18 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = True
+    result = False
+    three_digit=str(three_digit)
+    if three_digit[0] ==three_digit[1]:
+        result = True
+    elif three_digit[1] ==three_digit[2]:
+        result = True
+    elif three_digit[0] ==three_digit[2]:
+        result =True
     
-    if three_digit[0] !=three_digit[1] !=three_digit[2]:
-        result = False
 
     # ==================================
     return result
-
 def is_validated_number(user_input_number):
     # '''
     # Input:
@@ -286,6 +290,7 @@ def main():
         
         if str(user_input)==str(0):
             break
+        
         if is_between_100_and_999(user_input) and not is_duplicated_number(user_input):
             result=get_strikes_or_ball(user_input,random_number)
             print(f"Strikes : {result[0]} , Balls : {result[1]} ")
