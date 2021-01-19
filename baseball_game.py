@@ -284,7 +284,7 @@ def main():
     while True:
         user_input = input('Input guess number : ')
         
-        if user_input==str(0):
+        if str(user_input)==str(0):
             break
         if is_between_100_and_999(user_input) and not is_duplicated_number(user_input):
             result=get_strikes_or_ball(user_input,random_number)
