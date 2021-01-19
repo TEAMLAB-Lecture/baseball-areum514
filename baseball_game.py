@@ -287,7 +287,7 @@ def main():
         
         if user_input==str(0):
             break
-        if not is_duplicated_number(user_input):
+        if is_between_100_and_999(user_input) and not is_duplicated_number(user_input):
             result=get_strikes_or_ball(user_input,random_number)
             print(f"Strikes : {result[0]} , Balls : {result[1]} ")
             if result[0]==3:
